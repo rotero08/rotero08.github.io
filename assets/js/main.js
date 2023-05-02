@@ -5,6 +5,7 @@
 */
 
 function loadPage(url) {
+	url = url.replace(/\.html$/, '');
 	fetch(url)
 	  .then(response => response.text())
 	  .then(html => {
