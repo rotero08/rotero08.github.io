@@ -6,7 +6,7 @@
 
 function loadPage(url) {
 	url = url.replace(/\.html$/, '');
-	fetch(url)
+	fetch(url+".html")
 	  .then(response => response.text())
 	  .then(html => {
 		history.pushState({html}, null, url);
