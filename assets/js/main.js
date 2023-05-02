@@ -4,17 +4,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-function loadPage(url) {
-	url = url.replace(/\.html$/, '');
-	fetch(url)
-	  .then(response => response.text())
-	  .then(html => {
-		history.pushState({html}, null, url);
-		document.documentElement.innerHTML = html;
-	  })
-	  .catch(error => console.error(error));
-  }
-
 (function($) {
 
 	var	$window = $(window),
